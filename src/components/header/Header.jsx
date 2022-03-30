@@ -21,10 +21,6 @@ const NAV__LINKS = [
     display: "Contact",
     url: "/contact",
   },
-  {
-    display: "Contact",
-    url: "/contact",
-  },
 ];
 const Header = () => {
   return (
@@ -44,10 +40,31 @@ const Header = () => {
             <ul className="nav__list">
               {NAV__LINKS.map((item, index) => (
                 <li className="nav__item" key={index}>
-                  <NavLink to={item.url}> {item.display}</NavLink>
+                  <NavLink
+                    to={item.url}
+                    className={(navClass) =>
+                      navClass.isActive ? "active" : ""
+                    }
+                  >
+                    {item.display}
+                  </NavLink>
                 </li>
               ))}
             </ul>
+          </div>
+
+          <div className="nav_right d-flex gap-5 align-items-center">
+            <button className="btn d-flex gap-2 align-items-center">
+              <span>
+                <i className="ri-wallet-line"></i>
+              </span>
+              <Link to="/wallet">
+                Connect Wallet
+              </Link>
+            </button>
+            <span className="mobile__menu">
+              <i className="ri-menu-line"></i>
+            </span>
           </div>
         </div>
       </Container>
