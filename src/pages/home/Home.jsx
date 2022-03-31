@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
+import HeroSection from "../../components/ui/HeroSection";
+import LiveAuction from "../../components/ui/live-auction/LiveAuction";
 
 const Home = () => {
   return (
-    <div>Home</div>
-  )
-}
+    <>
+      <HeroSection />
+      <LiveAuction />
+    </>
+  );
+};
 
-export default Home
+export default Home;
