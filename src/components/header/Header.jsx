@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { NavLink, Link } from "react-router-dom";
 
 import { Container } from "reactstrap";
@@ -23,8 +23,26 @@ const NAV__LINKS = [
   },
 ];
 const Header = () => {
+  const headerRef = useRef(null);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (
+        document.body.scrollTop > 80 ||
+        document.documentElement.scrollTop > 80
+      ) {
+        headerRef.current.classList.add("header__shrink");
+      } else {
+        headerRef.current.classList.remove("header__shrink");
+      }
+    });
+    return () => {
+      window.removeEventListener("scroll");
+    };
+  }, []);
+
   return (
-    <header className="header">
+    <header className="header" ref={headerRef}>
       <Container>
         <div className="navigation">
           <div className="logo">
@@ -58,9 +76,7 @@ const Header = () => {
               <span>
                 <i className="ri-wallet-line"></i>
               </span>
-              <Link to="/wallet">
-                Connect Wallet
-              </Link>
+              <Link to="/wallet">Connect Wallet</Link>
             </button>
             <span className="mobile__menu">
               <i className="ri-menu-line"></i>

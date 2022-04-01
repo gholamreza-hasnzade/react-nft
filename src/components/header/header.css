@@ -7,7 +7,10 @@
   left: 0;
   z-index: 1111111;
 }
-
+.header__shrink {
+  background: #14141f;
+  box-shadow: 2px 2px 4px -2px #e250e5;
+}
 .navigation {
   display: flex;
   align-items: center;
@@ -18,6 +21,7 @@
   display: flex;
   align-items: center;
   column-gap: 2.7rem;
+  margin-bottom: 12px;
 }
 
 .nav__item a {
@@ -37,7 +41,7 @@
   background-clip: text;
   -webkit-text-stroke: 3px transparent;
   -webkit-text-fill-color: #14141f;
-}
+} 
 
 .nav_right .btn {
   padding: 7px 25px;
