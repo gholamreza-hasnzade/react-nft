@@ -11,7 +11,7 @@
   background: #5142fc;
   border-radius: 5px;
 }
-
+ 
 .step__title {
   color: #fff;
 }
@@ -25,3 +25,12 @@
   margin-top: 20px;
 }
 
+@media only screen and (max-width: 992px) {
+   .step__item__contnet h5 a{
+    font-size: 1rem;
+   }
+   .single__step__item p {
+     font-size: 0.8rem;
+     line-height: 25px;
+   }
+}

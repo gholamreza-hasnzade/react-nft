@@ -33,18 +33,18 @@ const STEP_DATA = [
     quod quia commodi impedit`,
     icon: "ri-list-check",
   },
-];
+]; 
 const StepSection = () => {
   return (
-    <div>
+    <section>
       <Container>
         <Row>
           <Col lg="12" className="mb-5">
             <h3 className="step__title">Create and sell your NFTs</h3>
           </Col>
 
-          {STEP_DATA.map((item) => (
-            <Col lg="3" md="4" sm="6" key={item.id}>
+          {STEP_DATA.map((item ,index) => (
+            <Col lg="3" md="4" sm="6" key={index} className="mb-4">
               <div className="single__step__item">
                 <span>
                   <i className={item.icon}></i>
@@ -60,7 +60,7 @@ const StepSection = () => {
           ))}
         </Row>
       </Container>
-    </div>
+    </section>
   );
 };
 

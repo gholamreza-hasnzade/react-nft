@@ -48,13 +48,44 @@
   color: #fff;
 }
 
-
-.hero__img{
-   width: 500px; 
-   margin-left: auto;
+.hero__img {
+  width: 500px;
+  margin-left: auto;
 }
 
-.hero__img img{
-    border-radius: 7px;
-    width: 100%;
+.hero__img img {
+  border-radius: 7px;
+  width: 100%;
+}
+
+@media only screen and (max-width: 992px) {
+  .hero__img {
+    width: 300px;
+  }
+  .Hero__section{
+    margin-top: 90px;
+  }
+  .hero__content h2 {
+    font-size: 1.5rem;
+    line-height: 40px;
+  }
+  .hero__content p {
+    font-size: 0.8rem;
+    line-height: 25px;
+  }
+  .create__btn , .explore__btn{
+    padding: 4px 25px !important;
+    font-size: 0.7rem;
+  }
+  .create__btn a , .explore__btn a {
+    font-size: 0.7rem;
+  }
+}
+
+@media only screen and (max-width: 576px)  {
+.hero__img{
+  width: 100%;
+  margin: auto  ;
+  margin-top: 50px;
+}
 }
